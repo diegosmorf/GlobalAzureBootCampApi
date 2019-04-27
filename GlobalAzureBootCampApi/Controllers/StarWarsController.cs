@@ -21,7 +21,9 @@ namespace GlobalAzureBootCampApi.Controllers
                 "Kylo Ren",
                 "Chewbacca",
                 "BB-8",
-                "Capitã Phasma"
+                "Capitã Phasma",
+                "Thanos",
+                "Capitão América"
             };
 
         // GET api/values
