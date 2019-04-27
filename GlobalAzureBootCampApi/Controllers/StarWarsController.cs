@@ -16,7 +16,7 @@ namespace GlobalAzureBootCampApi.Controllers
                 "Leia Organa",
                 "Han Solo",
                 "Obi-Wan Kenobi",
-                "Spok",
+                "Spock",
                 "Yoda",
                 "Rey",
                 "Kylo Ren",
