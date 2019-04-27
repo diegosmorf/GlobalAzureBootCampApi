@@ -8,7 +8,8 @@ namespace GlobalAzureBootCampApi.Controllers
     [ApiController]
     public class StarWarsController : ControllerBase
     {
-        private readonly string[] repository = new string[] { "Luke Skywalker",
+        private readonly string[] repository = new string[] {
+                "Luke Skywalker",
                 "C-3PO",
                 "R2-D2",
                 "Darth Vader",
@@ -18,21 +19,23 @@ namespace GlobalAzureBootCampApi.Controllers
                 "Yoda",
                 "Rey",
                 "Kylo Ren",
-                "BB-8"
+                "Chewbacca",
+                "BB-8",
+                "Capitã Phasma"
             };
 
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return repository;
+            return Ok(repository.OrderBy(x => x));
         }
 
         // GET api/values/5
         [HttpGet("{name}")]
         public ActionResult<IEnumerable<string>> Get(string name)
         {
-            return Ok(repository.Where(x => x.Contains(name)));
+            return Ok(repository.Where(x => x.ToLower().Contains(name.ToLower())));
         }
     }
 }
